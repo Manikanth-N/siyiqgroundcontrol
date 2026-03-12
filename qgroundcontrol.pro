@@ -1556,7 +1556,12 @@ LinuxBuild {
     INSTALLS += target share_qgroundcontrol share_icons share_metainfo share_applications
 }
 
-QMAKE_CXXFLAGS += -execution-charset:utf-8
-!AndroidBuild {
-QMAKE_CXXFLAGS += -source-charset:utf-8
+WindowsBuild {
+    QMAKE_CXXFLAGS += -execution-charset:utf-8
+    QMAKE_CXXFLAGS += -source-charset:utf-8
 }
+
+# QMAKE_CXXFLAGS += -execution-charset:utf-8
+# !AndroidBuild {
+# QMAKE_CXXFLAGS += -source-charset:utf-8
+# }

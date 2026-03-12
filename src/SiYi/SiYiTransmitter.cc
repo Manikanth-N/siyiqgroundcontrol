@@ -1,4 +1,5 @@
-﻿#include <QtEndian>
+﻿#include <limits>
+#include <QtEndian>
 #include "SiYiTransmitter.h"
 
 SiYiTransmitter::SiYiTransmitter(QObject *parent)

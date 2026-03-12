@@ -1,4 +1,5 @@
-﻿#include <QTimer>
+﻿#include <limits>
+#include <QTimer>
 #include <QtEndian>
 #include <QDateTime>
 #include <QTcpSocket>
