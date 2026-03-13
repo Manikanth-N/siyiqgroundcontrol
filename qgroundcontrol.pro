@@ -1502,6 +1502,7 @@ AndroidBuild {
         message("Skipping builtin support for Android")
     } else {
         include(android.pri)
+        LIBS += -lpcre2-8
     }
 }
 

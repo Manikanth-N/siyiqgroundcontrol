@@ -23,3 +23,15 @@ Key Links:
 * [Discussion/Support](https://docs.qgroundcontrol.com/en/Support/Support.html)
 * [Contributing](https://dev.qgroundcontrol.com/en/contribute/)
 * [License](https://github.com/mavlink/qgroundcontrol/blob/master/COPYING.md)
+
+
+
+# External Dependencies
+
+Download GStreamer Android:
+
+https://gstreamer.freedesktop.org/data/pkg/android/1.22.12/gstreamer-1.0-android-universal-1.22.12.tar.xz
+
+Extract to:
+
+siyiqgroundcontrol/gstreamer-android/
