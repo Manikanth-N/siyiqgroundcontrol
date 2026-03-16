@@ -68,14 +68,14 @@ LinuxBuild {
 } else:AndroidBuild {
     #- gstreamer assumed to be installed in $$PWD/../../gstreamer-1.0-android-universal-1.18.5/***
     contains(ANDROID_TARGET_ARCH, armeabi-v7a) {
-        GST_ROOT = /home/manikanth/projects/siyiqgroundcontrol/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/armv7
+        GST_ROOT = /home/manikanth/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/armv7
     } else:contains(ANDROID_TARGET_ARCH, arm64-v8a) {
-        GST_ROOT = /home/manikanth/projects/siyiqgroundcontrol/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/arm64
+        GST_ROOT = /home/manikanth/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/arm64
     } else:contains(ANDROID_TARGET_ARCH, x86_64) {
-        GST_ROOT = /home/manikanth/projects/siyiqgroundcontrol/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/x86_64
+        GST_ROOT = /home/manikanth/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/x86_64
     } else {
         message(Unknown ANDROID_TARGET_ARCH $$ANDROID_TARGET_ARCH)
-        GST_ROOT = /home/manikanth/projects/siyiqgroundcontrol/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/x86
+        GST_ROOT = /home/manikanth/gstreamer-android/gstreamer-1.0-android-universal-1.22.12/x86
     }
     exists($$GST_ROOT) {
         QMAKE_CXXFLAGS  += -pthread

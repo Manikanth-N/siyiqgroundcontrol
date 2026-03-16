@@ -88,7 +88,15 @@ Rectangle {
                 return
             }
 
-            hasBeenMoved = true
+            // hasBeenMoved = false
+
+            var dx = mouse.x - originX
+            var dy = mouse.y - originY
+
+            if (Math.abs(dx) > 10 || Math.abs(dy) > 10) {
+                hasBeenMoved = true
+            }
+
             controlMouseArea.currentX = mouse.x
             controlMouseArea.currentY = mouse.y
 
@@ -140,8 +148,10 @@ Rectangle {
                 var h = root.height
                 var x = mouse.x
                 var y = mouse.y
-                var cookedX = (x * videoW) / root.width
-                var cookedY = (y * videoH) / root.height
+                // var cookedX = (x * videoW) / root.width
+                // var cookedY = (y * videoH) / root.height
+                var cookedX = (mouse.x / controlMouseArea.width) * videoW
+                var cookedY = (mouse.y / controlMouseArea.height) * videoH
                 console.info("camera.setTrackingTarget()", cookedX, cookedY,
                              root.width, root.height)
                 camera.setTrackingTarget(true, cookedX, cookedY)
